@@ -23,10 +23,11 @@ public class Mapping {
 	public static CoderData getObject(Coder coder) {
 		
 		if (coder != null) {
+			CoderId coderId = coder.getId();
 			CoderData coderData = new CoderData();
-			coderData.setUserName(coder.getUserName());
-			coderData.setEmail(coder.getEmail());
-			coderData.setPassword(coder.getPassword());
+			coderData.setUserName(coderId.getUserName());
+			coderData.setEmail(coderId.getEmail());
+			coderData.setPassword(coderId.getPassword());
 			return coderData;
 		}
 		return null;
