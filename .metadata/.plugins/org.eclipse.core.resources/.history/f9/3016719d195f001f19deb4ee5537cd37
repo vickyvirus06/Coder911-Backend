@@ -1,0 +1,20 @@
+package com.coder911.coder.mapping.data;
+
+import com.coder911.coder.data.UserData;
+import com.coder911.coder.entity.User;
+
+public class Mapping {
+
+	public static User getEntity(UserData userData) {
+		
+		if (userData != null) {
+			User user = new User();
+			user.setUserName(userData.getUserName());
+			user.setEmail(userData.getEmail());
+			user.setPassword(userData.getPassword());
+			return user;
+		}
+		return null;
+	}
+
+}

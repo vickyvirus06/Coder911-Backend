@@ -1,0 +1,11 @@
+package com.user.service.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class UserDTO {
+
+}

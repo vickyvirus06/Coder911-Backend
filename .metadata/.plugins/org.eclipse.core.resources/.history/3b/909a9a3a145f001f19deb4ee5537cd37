@@ -1,0 +1,20 @@
+package com.user.service.mapping.data;
+
+import com.user.service.controller.UserData;
+import com.user.service.dto.UserDTO;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+public class Mapping {
+
+	public static UserData getObject(UserDTO userDTO) {
+		
+		return null;
+	}
+
+}

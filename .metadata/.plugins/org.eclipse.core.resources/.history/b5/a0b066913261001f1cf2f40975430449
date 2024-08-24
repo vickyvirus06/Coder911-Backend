@@ -1,0 +1,17 @@
+package com.coder911.queries.service.impl;
+
+import java.util.List;
+
+import com.coder911.queries.service.QueriesService;
+
+public class QueriesServiceImpl implements QueriesService{
+
+	@Autowired
+	private Qu
+	@Override
+	public List<String> fetchAllProgrammingLanguage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

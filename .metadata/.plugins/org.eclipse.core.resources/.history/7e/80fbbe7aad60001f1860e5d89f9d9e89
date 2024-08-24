@@ -1,0 +1,5 @@
+package com.coder911.queries.dto;
+
+public class QueryDTO {
+
+}

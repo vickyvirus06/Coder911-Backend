@@ -1,0 +1,24 @@
+package com.user.service.mapping.data;
+
+import com.user.service.data.UserData;
+import com.user.service.dto.UserDTO;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+public class Mapping {
+
+	public static UserData getObject(UserDTO userDTO) {
+		if (userDTO != null) {
+			UserData userData = new UserData();
+			userData.setUserName(userDTO.getUserName());
+			userData.setEmail(userDTO.getEmail());
+			userData.setPassword(userDTO.getPassword());
+			return userData;
+		}
+		
+		return null;
+	}
+
+}

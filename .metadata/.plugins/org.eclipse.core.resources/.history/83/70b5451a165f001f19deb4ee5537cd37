@@ -1,0 +1,26 @@
+package com.coder911.user.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.coder911.user.data.UserData;
+import com.coder911.user.entity.User;
+import com.coder911.user.mapping.data.Mapping;
+import com.coder911.user.repository.UserRepository;
+import com.coder911.user.service.UserService;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Override
+	public boolean verifyLogin(UserData userData) {
+		User user = Mapping.getEntity(userData);
+		
+		userRepository.findByEmailAndPassword(user.getEmail(), user.getPassword());
+		return false;
+	}
+
+}

@@ -1,5 +1,6 @@
 package com.coder911.coder.entity;
 
+import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,37 +9,16 @@ import jakarta.persistence.Id;
 @Entity
 public class Coder {
 
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
-	
-	private String userName;
-	private String email;
-	private String password;
-	
-	public int getId() {
+	@EmbeddedId
+	private CoderId id;
+
+	public CoderId getId() {
 		return id;
 	}
-	public void setId(int id) {
+
+	public void setId(CoderId id) {
 		this.id = id;
 	}
-	public String getUserName() {
-		return userName;
-	}
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
+
 	
 }

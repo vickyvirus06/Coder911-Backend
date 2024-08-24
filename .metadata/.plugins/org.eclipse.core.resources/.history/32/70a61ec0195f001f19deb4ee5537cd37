@@ -1,0 +1,31 @@
+package com.coder911.coder.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.coder911.coder.data.CoderData;
+import com.coder911.coder.dto.CoderDTO;
+import com.coder911.coder.mapping.dto.Mapping;
+import com.coder911.coder.service.UserService;
+
+import lombok.NonNull;
+
+@RestController
+@RequestMapping("/user")
+public class LoginController {
+
+	@Autowired
+	private UserService userService;
+	
+	@GetMapping("/login/{email}/{password}")
+	public boolean login(@PathVariable @NonNull String email, @PathVariable @NonNull String password) {
+		CoderData coderData = new CoderData();
+		coderData.setEmail(email);
+		coderData.setPassword(password);
+		return userService.verifyLogin(coderData);
+	}
+}

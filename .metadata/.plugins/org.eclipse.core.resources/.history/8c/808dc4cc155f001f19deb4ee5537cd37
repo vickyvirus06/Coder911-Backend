@@ -1,0 +1,16 @@
+package com.coder911.user.mapping.data;
+
+import com.coder911.user.data.UserData;
+import com.coder911.user.service.impl.User;
+
+public class Mapping {
+
+	public static User getEntity(UserData userData) {
+		
+		if (userData != null) {
+			User user = new User();
+		}
+		return null;
+	}
+
+}

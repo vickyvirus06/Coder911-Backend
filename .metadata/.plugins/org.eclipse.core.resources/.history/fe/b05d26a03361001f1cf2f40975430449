@@ -1,0 +1,13 @@
+package com.coder911.queries.entity;
+
+import jakarta.persistence.Entity;
+
+@Entity
+public class QueryLanguage {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.Auto)
+	private int id;
+	
+	
+}

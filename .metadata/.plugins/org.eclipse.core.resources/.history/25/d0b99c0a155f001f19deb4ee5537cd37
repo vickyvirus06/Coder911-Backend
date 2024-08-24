@@ -1,0 +1,7 @@
+package com.coder911.user.service.impl;
+
+import com.coder911.user.service.UserService;
+
+public class UserServiceImpl implements UserService {
+
+}

@@ -1,0 +1,6 @@
+package com.user.service.dto;
+
+@Lombok
+public class UserDTO {
+
+}

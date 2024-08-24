@@ -1,0 +1,5 @@
+package com.coder911.queries.repository;
+
+public interface QueryLanguage {
+
+}

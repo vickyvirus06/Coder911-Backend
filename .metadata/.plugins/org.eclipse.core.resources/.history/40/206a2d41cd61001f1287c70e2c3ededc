@@ -1,0 +1,17 @@
+spring.application.name=API-GATEWAY
+server.port=8762
+
+eureka.client.serviceUrl.defaultZone: http://localhost:8761/eureka/
+eureka.client.register-with-eureka=true
+eureka.client.fetch-registry=true
+
+spring.cloud.gateway.discovery.locator.enabled=true
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+
+spring.cloud.gateway.routes[0].id=CODER-SERVICE
+spring.cloud.gateway.routes[0].uri=lb://CODER-SERVICE/
+spring.cloud.gateway.routes[0].predicates[0]=Path=/coder/**
+spring.cloud.gateway.routes[1].id=QUERIES-SERVICE
+spring.cloud.gateway.routes[1].uri=lb://QUERIES-SERVICE
+spring.cloud.gateway.routes[1].predicates[0]=Path=/queries/**
+spring.cloud.gateway.routes[1].predicates[1]=Path=/queryLanguageType/**

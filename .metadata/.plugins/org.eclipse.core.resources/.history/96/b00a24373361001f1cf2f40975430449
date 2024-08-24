@@ -1,0 +1,7 @@
+package com.coder911.queries.service.impl;
+
+import com.coder911.queries.service.QueryLanguageTypeService;
+
+public class QueryLanguageTypeServiceImpl implements QueryLanguageTypeService {
+
+}

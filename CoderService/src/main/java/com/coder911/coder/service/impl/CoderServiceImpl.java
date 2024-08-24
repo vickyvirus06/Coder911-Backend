@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.coder911.coder.data.CoderData;
 import com.coder911.coder.dto.CoderDTO;
 import com.coder911.coder.entity.Coder;
+import com.coder911.coder.entity.CoderId;
 import com.coder911.coder.mapping.data.Mapping;
 import com.coder911.coder.repository.CoderRepository;
 import com.coder911.coder.service.CoderService;
@@ -19,10 +20,11 @@ public class CoderServiceImpl implements CoderService {
 	
 	@Override
 	public boolean verifyLogin(CoderData coderData) {
-		Coder coder = Mapping.getEntity(coderData);
-		Coder verifyUser = coderRepository.findByEmail(coder.getEmail());
-		if (verifyUser != null) {
-			return EncryptionUtil.verifyPassword(coder.getPassword(), verifyUser.getPassword());
+		CoderId coderId = Mapping.getId(coderData);
+		Coder verifyUser = coderRepository.findByEmail(coderId.getEmail());
+		if (verifyUser != null && verifyUser.getId() != null) {
+			return EncryptionUtil.verifyPassword(coderId.getPassword(), 
+					verifyUser.getId().getPassword());
 		}
 		return verifyUser != null;
 	}
@@ -31,7 +33,7 @@ public class CoderServiceImpl implements CoderService {
 	public CoderData saveCoder(CoderData coderData) {
 		try {
 			Coder coder = Mapping.getEntity(coderData);
-			coder.setPassword(EncryptionUtil.enrcyptPassword(coder.getPassword()));
+			coder.getId().setPassword(EncryptionUtil.enrcyptPassword(coderData.getPassword()));
 			Coder savedCoder = coderRepository.save(coder);
 			if (savedCoder != null) {
 				return Mapping.getObject(savedCoder);

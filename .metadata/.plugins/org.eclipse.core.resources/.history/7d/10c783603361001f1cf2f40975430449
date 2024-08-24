@@ -1,0 +1,15 @@
+package com.coder911.queries.service.impl;
+
+import java.util.List;
+
+import com.coder911.queries.service.QueryLanguageTypeService;
+
+public class QueryLanguageTypeServiceImpl implements QueryLanguageTypeService {
+
+	@Override
+	public List<String> fetchAllProgrammingLanguage() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

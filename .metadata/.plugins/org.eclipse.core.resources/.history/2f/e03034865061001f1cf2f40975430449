@@ -1,0 +1,18 @@
+package com.coder911.queries.data;
+
+import com.coder911.queries.dto.QueryDTO;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class QueryData {
+	
+	private String selectedLanguage;
+	private String queryTitle;
+	private String queryDescription;
+
+}

@@ -1,0 +1,8 @@
+package com.coder911.user.service;
+
+import com.coder911.user.data.UserData;
+
+public interface UserService {
+
+	public boolean verifyLogin(UserData userData);
+}

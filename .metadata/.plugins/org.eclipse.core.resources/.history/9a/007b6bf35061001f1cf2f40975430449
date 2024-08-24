@@ -1,0 +1,11 @@
+package com.coder911.queries.service;
+
+import java.util.List;
+
+import com.coder911.queries.data.QueryData;
+
+public interface QueriesService {
+
+	QueryData saveQuery(QueryData queryData);
+
+}

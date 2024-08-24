@@ -1,0 +1,17 @@
+package com.coder911.coder.util;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.stereotype.Component;
+
+@Component
+public class EncryptionUtil {
+
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+	public String enrcyptPassword(String password) {
+		return bCryptPasswordEncoder.encode(password);
+	}
+
+}

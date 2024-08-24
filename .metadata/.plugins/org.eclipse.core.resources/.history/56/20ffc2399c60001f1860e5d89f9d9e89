@@ -1,0 +1,5 @@
+package com.coder911.coder.configuration;
+
+public class SecurityConfig {
+
+}

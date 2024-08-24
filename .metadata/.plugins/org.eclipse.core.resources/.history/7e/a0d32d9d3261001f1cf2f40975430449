@@ -1,0 +1,13 @@
+package com.coder911.queries.service.impl;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.coder911.queries.service.QueriesService;
+
+@Service
+public class QueriesServiceImpl implements QueriesService{
+
+
+}

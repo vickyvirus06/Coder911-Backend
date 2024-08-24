@@ -1,0 +1,20 @@
+package com.coder911.coder.mapping.dto;
+
+import com.coder911.coder.data.CoderData;
+import com.coder911.coder.dto.UserDTO;
+
+public class Mapping {
+
+	public static CoderData getObject(UserDTO userDTO) {
+		if (userDTO != null) {
+			CoderData coderData = new CoderData();
+			coderData.setUserName(userDTO.getUserName());
+			coderData.setEmail(userDTO.getEmail());
+			coderData.setPassword(userDTO.getPassword());
+			return coderData;
+		}
+		
+		return null;
+	}
+
+}

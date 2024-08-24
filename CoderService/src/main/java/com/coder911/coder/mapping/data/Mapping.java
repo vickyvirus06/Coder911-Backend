@@ -2,7 +2,7 @@ package com.coder911.coder.mapping.data;
 
 import com.coder911.coder.data.CoderData;
 import com.coder911.coder.entity.Coder;
-import com.coder911.coder.util.EncryptionUtil;
+import com.coder911.coder.entity.CoderId;
 
 public class Mapping {
 
@@ -10,9 +10,11 @@ public class Mapping {
 		
 		if (coderData != null) {
 			Coder coder = new Coder();
-			coder.setUserName(coderData.getUserName());
-			coder.setEmail(coderData.getEmail());
-			coder.setPassword(coderData.getPassword());
+			CoderId coderId = new CoderId();
+			coderId.setUserName(coderData.getUserName());
+			coderId.setEmail(coderData.getEmail());
+			coderId.setPassword(coderData.getPassword());
+			coder.setId(coderId);
 			return coder;
 		}
 		return null;
@@ -26,6 +28,18 @@ public class Mapping {
 			coderData.setEmail(coder.getEmail());
 			coderData.setPassword(coder.getPassword());
 			return coderData;
+		}
+		return null;
+	}
+
+	public static CoderId getId(CoderData coderData) {
+		
+		if (coderData != null) {
+			CoderId coderId = new CoderId();
+			coderId.setUserName(coderData.getUserName());
+			coderId.setEmail(coderData.getEmail());
+			coderId.setPassword(coderData.getPassword());
+			return coderId;
 		}
 		return null;
 	}

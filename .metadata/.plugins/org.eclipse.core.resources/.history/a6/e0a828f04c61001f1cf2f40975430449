@@ -1,0 +1,12 @@
+package com.coder911.queries.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class QueryDTO {
+	
+
+}

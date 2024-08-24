@@ -1,0 +1,18 @@
+package com.coder911.queries.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import com.coder911.queries.data.QueryData;
+import com.coder911.queries.service.QueriesService;
+
+@Service
+public class QueriesServiceImpl implements QueriesService{
+
+	@Override
+	public QueryData saveQuery(QueryData queryData) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+}
